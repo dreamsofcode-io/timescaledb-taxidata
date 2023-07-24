@@ -49,7 +49,7 @@ $ brew install python
 #### Arch Linux
 
 ```
-$ sudo pacman -Ss python
+$ sudo pacman -S python
 ```
 
 ### Debian
@@ -60,4 +60,42 @@ $ sudo apt install python
 
 ### psql
 
+In the video we interact with the database using psql, which is a command line
+tool provided by postgres.
+
+#### macOS
+
+To install it for macOS, you can use homebrew
+
+```
+$ brew install postgresql
+```
+
+#### Arch Linux
+
+```
+$ sudo pacman -S postgresql
+```
+
 ### sqlx-cli
+
+SQLx is used for database migrations. To install it, you can do so one of two
+ways, depending on if you have rust installed on your system or not.
+
+#### Cargo
+
+```
+$ cargo install sqlx-cli
+```
+
+#### macOS
+
+```
+$ brew install sqlx-cli
+```
+
+#### Arch Linux
+
+```
+$ sudo pacman -S sqlx-cli
+```
