@@ -43,7 +43,7 @@ loading it into timescaleDB. The recommended version of python to use is
 To install on macOS, one can use homebrew to do so using the following commands
 
 ```
-$ brew install python3 pip3
+$ brew install python
 ```
 
 #### Arch Linux
