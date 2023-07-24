@@ -9,6 +9,7 @@ import time
 pguri = os.environ["DATABASE_URL"]
 conn_dict = psycopg.conninfo.conninfo_to_dict(pguri)
 
+
 def handle_file(file, columns, cabid):
     conn = psycopg2.connect(**conn_dict)
 
@@ -45,7 +46,11 @@ def handle_green(file):
     tip_col = 12
     total_col = 16
 
-    handle_file(file=file, columns=[pickup_col, dropoff_col, distance_col, tip_col, total_col], cabid=2)
+    handle_file(
+        file=file,
+        columns=[pickup_col, dropoff_col, distance_col, tip_col, total_col],
+        cabid=2,
+    )
 
 
 def handle_yellow(file):

@@ -21,26 +21,41 @@ You can get the managed version of timescale on their [website](https://www.time
 #### Timescale local
 
 If you want to run it locally, you can do so by extending postgres. Timescale
-have some great [documentation](https://docs.timescale.com/self-hosted/latest/install/) 
-on how to do that. 
+have some great [documentation](https://docs.timescale.com/self-hosted/latest/install/)
+on how to do that.
 
 #### Timescale Docker
 
-Finally, another great approach is to use docker. The 
+Finally, another great approach is to use docker. The
 [documentation](https://docs.timescale.com/self-hosted/latest/install/installation-docker/)
 providews instructions here as well. Be warned that if you're running docker
-on a non linux machine, it will be slower due to having to run through a 
+on a non linux machine, it will be slower due to having to run through a
 hypervisor.
 
 ### Python3
 
-Python3 is used as the primary language for downloading data and then 
-loading it into timescaleDB. The recommended version of python to use is 
+Python3 is used as the primary language for downloading data and then
+loading it into timescaleDB. The recommended version of python to use is
 3.11.x or greater.
+
+#### macOS
 
 To install on macOS, one can use homebrew to do so using the following commands
 
 ```
+$ brew install python3 pip3
+```
+
+#### Arch Linux
+
+```
+$ sudo pacman -Ss python
+```
+
+### Debian
+
+```
+$ sudo apt install python
 ```
 
 ### psql
