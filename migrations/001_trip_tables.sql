@@ -6,7 +6,7 @@ CREATE table trips (
   distance float not null,
   tip_amount float,
   total_amount float,
-  cab_type_id int not null references cab_types(id)
+  cab_type_id int not null
 );
 
 CREATE table trips_hyper (
@@ -15,7 +15,7 @@ CREATE table trips_hyper (
   distance float not null,
   tip_amount float,
   total_amount float,
-  cab_type_id int not null references cab_types(id)
+  cab_type_id int not null
 );
 
 SELECT create_hypertable('trips_hyper', 'started_at');
