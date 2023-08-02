@@ -1,6 +1,6 @@
 BEGIN;
 
-CREATE table trips (
+CREATE TABLE IF NOT EXISTS trips (
   started_at TIMESTAMPTZ not null,
   ended_at TIMESTAMPTZ not null,
   distance float not null,
@@ -9,7 +9,7 @@ CREATE table trips (
   cab_type_id int not null
 );
 
-CREATE table trips_hyper (
+CREATE TABLE IF NOT EXISTS trips_hyper (
   started_at TIMESTAMPTZ not null,
   ended_at TIMESTAMPTZ not null,
   distance float not null,

@@ -1,11 +1,11 @@
 BEGIN;
 
-CREATE table data_loaded (
+CREATE TABLE IF NOT EXISTS data_loaded (
   filename varchar not null primary key,
   loaded_at TIMESTAMPTZ not null
 );
 
-CREATE TABLE cab_types (
+CREATE TABLE IF NOT EXISTS cab_types (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL
 );
@@ -13,3 +13,4 @@ CREATE TABLE cab_types (
 INSERT INTO cab_types (name) VALUES ('yellow'), ('green'); 
 
 COMMIT;
+
