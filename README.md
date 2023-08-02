@@ -77,25 +77,25 @@ $ brew install postgresql
 $ sudo pacman -S postgresql
 ```
 
-### sqlx-cli
+### migrate-cli
 
-SQLx is used for database migrations. To install it, you can do so one of two
-ways, depending on if you have rust installed on your system or not.
+[migrate](https://github.com/golang-migrate/migrate) is used for database migrations. To install it, you can do so one of two
+ways, depending on if you have go installed on your system or not.
 
-#### Cargo
+#### Go
 
 ```
-$ cargo install sqlx-cli
+$ go install -tags 'postgres' github.com/golang-migrate/migrate/v4/cmd/migrate@latest
 ```
 
 #### macOS
 
 ```
-$ brew install sqlx-cli
+$ brew install migrate
 ```
 
 #### Arch Linux
 
 ```
-$ sudo pacman -S sqlx-cli
+$ yay -S migrate
 ```
