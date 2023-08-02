@@ -46,10 +46,6 @@ def handle_file(file, columns, cabid):
 
 
 def handle_green(file):
-    if "green_tripdata_2023" in file:
-        print(f"Skipping {file}")
-        return
-
     pickup_col = 1
     dropoff_col = 2
     distance_col = 8
@@ -64,10 +60,6 @@ def handle_green(file):
 
 
 def handle_yellow(file):
-    if "yellow_tripdata_2023" in file:
-        print(f"Skipping {file}")
-        return
-
     handle_file(file=file, columns=[1, 2, 4, 15, 17], cabid=1)
 
 
@@ -91,18 +83,14 @@ if __name__ == "__main__":
     loaded = set([x[0] for x in loaded])
     conn.close()
 
-    yellow_files = glob("./data/yellow_tripdata_*.parquet")
+    yellow_files = glob("./data/yellow_tripdata_2023*.parquet")
     yellow_files = [x for x in yellow_files if x not in loaded]
 
-    green_files = glob("./data/green_tripdata_*.parquet")
+    green_files = glob("./data/green_tripdata_2023*.parquet")
     green_files = [x for x in green_files if x not in loaded]
 
     with Pool(concurrency) as p:
         p.map(handle_yellow, yellow_files)
         p.map(handle_green, green_files)
-
-    # Copy the data from the hyper table to the main table
-    if "copy" not in loaded:
-        handle_copy()
 
     print("Done!")
