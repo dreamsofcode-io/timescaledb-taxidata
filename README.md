@@ -16,7 +16,7 @@ of ways to get a timescale DB instance up and running.
 This is the easiest approach to get started, and it's free for 30 days. This
 allows you to easily try timescale before commiting to any purchase or use case.
 
-You can get the managed version of timescale on their [website](https://www.timescale.com/)
+You can get the managed version of timescale on their [website](https://www.timescale.com/?utm_source=dreams-of-code&utm_medium=youtube&utm_campaign=kol-q3-2023&utm_content=homepage)
 
 #### Timescale local
 
