@@ -75,7 +75,7 @@ def handle_copy():
     conn = psycopg2.connect(**conn_dict)
     cur = conn.cursor()
     cur.execute("INSERT INTO trips SELECT * FROM trips_hyper")
-    cur.execute("INSERT INTO data_loaded (filename, loaded_at) VALUES ('copy', now()))")
+    cur.execute("INSERT INTO data_loaded (filename, loaded_at) VALUES ('copy', now())")
     conn.commit()
     conn.close()
 
